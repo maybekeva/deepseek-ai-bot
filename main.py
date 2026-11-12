@@ -1,1 +1,1 @@
-print('Start bot')
+print('DeepSeek Bot v1.0')
