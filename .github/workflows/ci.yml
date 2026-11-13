@@ -20,3 +20,11 @@ jobs:
 
       - name: Check Python syntax
         run: python -m py_compile *.py
+
+      - name: Install TruffleHog
+        run: curl -sSfL https://raw.githubusercontent.com/trufflesecurity/trufflehog/main/scripts/install.sh | sudo sh -s -- -b /usr/local/bin
+
+      - name: TruffleHog Secret Scan
+        run: |
+          rm -rf .git
+          trufflehog filesystem . --no-verification --fail
