@@ -27,4 +27,4 @@ jobs:
       - name: TruffleHog Secret Scan
         run: |
           rm -rf .git
-          trufflehog filesystem . --no-verification --fail
+          trufflehog filesystem . --no-update --no-verification --fail
