@@ -6,7 +6,8 @@ TOP_P = 0.9
 
 def get_config():
     return {
-        "model": "deepseek-chat",
+        "model": MODEL,
         "temperature": TEMPERATURE,
-        "top_p": TOP_P
+        "top_p": TOP_P,
+        "max_tokens": MAX_TOKENS
     }
